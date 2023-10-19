@@ -3,13 +3,6 @@ import os
 from datetime import datetime
 import logging
 
-
-def ch_cwd():
-    current_file_name = inspect.getfile(inspect.currentframe())
-    path = os.path.dirname(os.path.abspath(current_file_name))
-    os.chdir(path)
-    print(f"Changing working directory to {path}.")
-
 def set_seed(seed):
     try:
         import numpy as np
